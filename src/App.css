@@ -4,3 +4,7 @@
   --accent-color: #B59F3B;
   --bg-color: #121214;
 }
+
+body {
+  background: var(--bg-color);
+}
