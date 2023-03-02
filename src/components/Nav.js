@@ -8,11 +8,15 @@ import { MdSettings } from "react-icons/md";
 export default function Nav() {
 	return (
 		<nav>
-			<GiHamburgerMenu />
+			<span className="hamburger">
+				<GiHamburgerMenu />
+			</span>
 			<h1> Wordle </h1>
-			<RxQuestionMarkCircled />
-			<IoIosStats />
-			<MdSettings />
+			<span className="icons">
+				<RxQuestionMarkCircled />
+				<IoIosStats />
+				<MdSettings />
+			</span>
 		</nav>
 	);
 }
