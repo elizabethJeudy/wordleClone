@@ -1,6 +1,5 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 import "./Board.css";
-import { boardDefault } from "./Words";
 import Letters from "./Letters";
 
 export default function Board() {

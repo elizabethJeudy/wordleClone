@@ -3,7 +3,8 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
-import { createContext } from "react";
+import { createContext, useState } from "react";
+import { boardDefault } from "./components/Words";
 
 export const AppContext = createContext();
 
