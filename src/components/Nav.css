@@ -1,6 +1,4 @@
 nav {
-  color: #fff;
-  font-family: 'Clear Sans', 'Helvetica Neue', 'Arial, sans-serif';
   display: flex;
   flex-direction: row;
   justify-content: space-between;
