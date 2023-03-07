@@ -10,12 +10,3 @@ body {
   color: #fff;
   font-family: 'Clear Sans', 'Helvetica Neue', 'Arial, sans-serif';
 }
-
-.game {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  height: calc(100vh - 170px);
-  padding-top: 50px;
-}
