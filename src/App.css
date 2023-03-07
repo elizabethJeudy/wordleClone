@@ -7,4 +7,6 @@
 
 body {
   background: var(--bg-color);
+  color: #fff;
+  font-family: 'Clear Sans', 'Helvetica Neue', 'Arial, sans-serif';
 }

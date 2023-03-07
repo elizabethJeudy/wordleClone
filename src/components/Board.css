@@ -1,0 +1,15 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 550px;
+  border: 1px solid white;
+}
+
+.row {
+  display: flex;
+  flex: 33%;
+  /* research */
+  flex-direction: row;
+  margin: 5px;
+}
