@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import react, { useContext } from "react";
 import "./Board.css";
 import Letters from "./Letters";
 

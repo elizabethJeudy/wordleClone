@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
+import { boardDefault } from "./components/Words";
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
-import { createContext, useState } from "react";
-import { boardDefault } from "./components/Words";
+import { createContext } from "react";
 
 export const AppContext = createContext();
 
