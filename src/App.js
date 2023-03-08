@@ -8,9 +8,10 @@ import { createContext } from "react";
 
 export const AppContext = createContext();
 
+// keeps track of letter moving to cells with
+// each attempt and letter positions
 export default function App() {
 	const [board, setBoard] = useState(boardDefault);
-	// keeps track of letter moving to cells with each attempt and letter positions
 
 	// checks which letter was selected
 	const onSelectLetter = (keyValue) => {
