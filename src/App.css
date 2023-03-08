@@ -24,3 +24,15 @@ body {
   flex-direction: column;
   padding-top: 50px;
 }
+
+#correct {
+  background-color: var(--secondary-color);
+}
+
+#almost {
+  background-color: var(--accent-color);
+}
+
+#wrong {
+  background-color: var(--primary-color);
+}
