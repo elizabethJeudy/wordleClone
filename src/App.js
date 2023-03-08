@@ -16,7 +16,10 @@ export default function App() {
 				<Nav />
 				{/* gives access to pass the states with value */}
 				<AppContext.Provider value={{ board, setBoard }}>
-					<Board />
+					<div className="game">
+						<Board />
+					</div>
+
 					<Keyboard />
 				</AppContext.Provider>
 			</div>
