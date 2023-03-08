@@ -1,4 +1,4 @@
-import react, { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { AppContext } from "../App";
 
 export default function Letters({ letterPosition, attemptValue }) {
