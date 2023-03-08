@@ -26,7 +26,7 @@ export default function Keyboard() {
 				{keys3.map((key) => {
 					return <Key keyValue={key} />;
 				})}
-				<Key keyValue={<RiDeleteBack2Line />} bigKey />
+				<Key keyValue={"DELETE"} bigKey />
 			</div>
 		</div>
 	);
