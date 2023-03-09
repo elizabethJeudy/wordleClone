@@ -13,6 +13,9 @@ export const AppContext = createContext();
 export default function App() {
 	const [board, setBoard] = useState(boardDefault);
 
+	// checks if letter/word is correct
+	const correctWord = "RIGHT";
+
 	// checks which letter was selected
 	const onSelectLetter = (keyValue) => {
 		if (currentAttempt.letterPosition > 4) return;
@@ -64,6 +67,7 @@ export default function App() {
 						onSelectLetter,
 						onEnter,
 						onDelete,
+						correctWord,
 					}}
 				>
 					<div className="game">
