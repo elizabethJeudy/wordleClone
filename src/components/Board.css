@@ -9,7 +9,6 @@
 .row {
   display: flex;
   flex: 33%;
-  /* research */
   flex-direction: row;
   margin: 5px;
 }
