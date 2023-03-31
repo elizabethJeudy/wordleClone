@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import "./Board.css";
 import Letters from "./Letters";
 
+// attempt values represent each box letter attempt at each row
+
 export default function Board() {
 	return (
 		<div className="board">
@@ -51,4 +53,3 @@ export default function Board() {
 		</div>
 	);
 }
-// attempt values represent each box letter attempt at each row
