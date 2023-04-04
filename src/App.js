@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
-import { boardDefault } from "./components/Words";
+import { boardDefault, generateWordSet } from "./components/Words";
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import { createContext } from "react";
 
 export const AppContext = createContext();
 
-// keeps track of letter moving to cells with
-// each attempt and letter positions
+/* keeps track of letter moving to cells with
+ each attempt and letter positions */
 export default function App() {
 	const [board, setBoard] = useState(boardDefault);
-
+	// represents set of words
+	const [wordSet, setWordSet] = useState(new Set());
 	// checks if letter/word is correct
-	const correctWord = "RIGHT";
+	const correctWord = "APPLE";
+
+	//generates word set
+	useEffect(() => {
+		generateWordSet().then((words) => {
+			setWordSet(words.wordSet);
+		});
+	}, []);
 
 	// checks which letter was selected
 	const onSelectLetter = (keyValue) => {
@@ -43,10 +51,23 @@ export default function App() {
 
 	const onEnter = () => {
 		if (currentAttempt.letterPosition !== 5) return;
-		setCurrentAttempt({
-			attempt: currentAttempt.attempt + 1,
-			letterPosition: 0,
-		});
+
+		let currentWord = "";
+		for (let i = 0; i < 5; i++) {
+			currentWord += board[currentAttempt.attempt][i];
+		}
+		if (wordSet.has(currentWord.toLowerCase())) {
+			setCurrentAttempt({
+				attempt: currentAttempt.attempt + 1,
+				letterPosition: 0,
+			});
+		} else {
+			alert("Not in word list");
+		}
+
+		if (currentWord === correctWord) {
+			alert("Nice job!");
+		}
 	};
 
 	const [currentAttempt, setCurrentAttempt] = useState({
