@@ -1,7 +1,8 @@
 :root {
-  --primary-color: #3A3A3B;
+  --primary-color: #3a3a3b42;
   --secondary-color: #538D4E;
   --accent-color: #B59F3B;
+  --accent-color2: #3A3A3B;
   --bg-color: #121214;
 }
 
@@ -34,5 +35,5 @@ body {
 }
 
 #wrong {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color2);
 }
