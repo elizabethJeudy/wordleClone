@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
 
-export default function Key({ keyValue, bigKey }) {
+export default function Key({ keyValue, bigKey, used }) {
 	// gets access from the board (state)
 	const { onSelectLetter, onEnter, onDelete } = useContext(AppContext);
 
@@ -20,7 +20,11 @@ export default function Key({ keyValue, bigKey }) {
 
 	// id bigKey depends on if a key is big or not
 	return (
-		<div className="key" id={bigKey && "big"} onClick={selectLetter}>
+		<div
+			className="key"
+			id={bigKey ? "big" : used && "used"}
+			onClick={selectLetter}
+		>
 			{keyValue}
 		</div>
 	);

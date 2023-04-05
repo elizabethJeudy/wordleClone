@@ -12,8 +12,11 @@ export const AppContext = createContext();
  each attempt and letter positions */
 export default function App() {
 	const [board, setBoard] = useState(boardDefault);
-	// represents set of words
+	// state represents set of words
 	const [wordSet, setWordSet] = useState(new Set());
+	// state contains all letters user has guessed incorrectly
+	const [usedLetters, setUsedLetters] = useState([]);
+
 	// checks if letter/word is correct
 	const correctWord = "APPLE";
 
@@ -89,6 +92,8 @@ export default function App() {
 						onEnter,
 						onDelete,
 						correctWord,
+						setUsedLetters,
+						usedLetters,
 					}}
 				>
 					<div className="game">

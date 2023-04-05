@@ -6,7 +6,8 @@ import { RiDeleteBack2Line } from "react-icons/ri";
 import { AppContext } from "../App";
 
 export default function Keyboard() {
-	const { onSelectLetter, onEnter, onDelete } = useContext(AppContext);
+	const { onSelectLetter, onEnter, onDelete, usedLetters } =
+		useContext(AppContext);
 	// keys for each line
 	const keys1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
 	const keys2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
@@ -51,18 +52,18 @@ export default function Keyboard() {
 		<div className="keyboard" onKeyDown={handleKeyboard}>
 			<div className="line1">
 				{keys1.map((key) => {
-					return <Key keyValue={key} />;
+					return <Key keyValue={key} used={usedLetters.includes(key)} />;
 				})}
 			</div>
 			<div className="line2">
 				{keys2.map((key) => {
-					return <Key keyValue={key} />;
+					return <Key keyValue={key} used={usedLetters.includes(key)} />;
 				})}
 			</div>
 			<div className="line3">
 				<Key keyValue={"ENTER"} bigKey />
 				{keys3.map((key) => {
-					return <Key keyValue={key} />;
+					return <Key keyValue={key} used={usedLetters.includes(key)} />;
 				})}
 				<Key keyValue={"DELETE"} bigKey />
 			</div>
