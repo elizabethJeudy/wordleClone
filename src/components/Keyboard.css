@@ -30,3 +30,7 @@
 #big {
   width: 100px;
 }
+
+#used {
+  background-color: var(--primary-color);
+}
