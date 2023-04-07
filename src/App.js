@@ -5,6 +5,8 @@ import { boardDefault, generateWordSet } from "./components/Words";
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import { createContext } from "react";
+import { findAllByTestId } from "@testing-library/react";
+import GameOver from "./components/GameOver";
 
 export const AppContext = createContext();
 
@@ -16,6 +18,11 @@ export default function App() {
 	const [wordSet, setWordSet] = useState(new Set());
 	// state contains all letters user has guessed incorrectly
 	const [usedLetters, setUsedLetters] = useState([]);
+	// state checks for 6 attempts
+	const [gameOver, setGameOver] = useState({
+		gameOver: false,
+		guessedWord: false,
+	});
 
 	// checks if letter/word is correct
 	const correctWord = "APPLE";
@@ -69,7 +76,11 @@ export default function App() {
 		}
 
 		if (currentWord === correctWord) {
-			alert("Nice job!");
+			setGameOver({ gameOver: true, guessedWord: true });
+			return;
+		}
+		if (currentAttempt.attempt === 5) {
+			setGameOver({ gameOver: true, guessedWord: false });
 		}
 	};
 
@@ -94,13 +105,15 @@ export default function App() {
 						correctWord,
 						setUsedLetters,
 						usedLetters,
+						gameOver,
+						setGameOver,
 					}}
 				>
 					<div className="game">
 						<Board />
 					</div>
 
-					<Keyboard />
+					{gameOver.gameOver ? <GameOver /> : <Keyboard />}
 				</AppContext.Provider>
 			</div>
 		</div>
