@@ -72,7 +72,7 @@ export default function App() {
 				letterPosition: 0,
 			});
 		} else {
-			alert("Not in word list");
+			alert("Opps, this is not word.");
 		}
 
 		if (currentWord === correctWord) {
