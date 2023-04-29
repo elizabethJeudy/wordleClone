@@ -27,7 +27,7 @@ export default function App() {
 	// checks if letter/word is correct
 	const correctWord = "APPLE";
 
-	//generates word set
+	// generates word set
 	useEffect(() => {
 		generateWordSet().then((words) => {
 			setWordSet(words.wordSet);
