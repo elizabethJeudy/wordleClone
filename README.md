@@ -19,4 +19,4 @@ The built in keyboard reflects the letters you've already used, using the same c
 Try to be strategic and think of the letters in play
 _hint_ sometimes there are double letters and its okay to use a letter that was previously wrong in order to help you out!
 
-<!-- learned useContext, flex: percentage, [...state], useEffect >
+<!-- learned useContext, flex: percentage, [...state], useEffect, new Set + .has , .includes  >
