@@ -8,7 +8,7 @@ export default function Letters({ letterPosition, attemptValue }) {
 	const letters = board[attemptValue][letterPosition];
 
 	// checks if correct or not
-	const correct = correctWord[letterPosition] === letters;
+	const correct = correctWord.toUpperCase()[letterPosition] === letters;
 	const almost =
 		!correct && letters !== "" && correctWord.toUpperCase().includes(letters);
 	// checks if letter is correct, almost, or wrong

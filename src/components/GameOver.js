@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import swal from "sweetalert";
 
 // renders message if user got word correct in 6 attempts or not
 export default function GameOver() {
