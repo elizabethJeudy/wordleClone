@@ -1,8 +1,6 @@
 import React, { useCallback, useContext, useEffect } from "react";
 import "./Keyboard.css";
 import Key from "./Key";
-
-import { RiDeleteBack2Line } from "react-icons/ri";
 import { AppContext } from "../App";
 
 export default function Keyboard() {
