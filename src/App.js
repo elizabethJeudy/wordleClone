@@ -5,7 +5,6 @@ import { boardDefault, generateWordSet } from "./components/Words";
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import { createContext } from "react";
-import { findAllByTestId } from "@testing-library/react";
 import GameOver from "./components/GameOver";
 
 export const AppContext = createContext();
@@ -18,19 +17,19 @@ export default function App() {
 	const [wordSet, setWordSet] = useState(new Set());
 	// state contains all letters user has guessed incorrectly
 	const [usedLetters, setUsedLetters] = useState([]);
+	// grabs word of the day
+	const [correctWord, setCorrectWord] = useState("");
 	// state checks for 6 attempts
 	const [gameOver, setGameOver] = useState({
 		gameOver: false,
 		guessedWord: false,
 	});
 
-	// checks if letter/word is correct
-	const correctWord = "APPLE";
-
-	// generates word set
+	// generates word set once
 	useEffect(() => {
 		generateWordSet().then((words) => {
 			setWordSet(words.wordSet);
+			setCorrectWord(words.todaysWord);
 		});
 	}, []);
 
@@ -72,9 +71,9 @@ export default function App() {
 				letterPosition: 0,
 			});
 		} else {
-			alert("Opps, this is not word.");
+			alert("Opps, this is not word");
 		}
-
+		// renders when game is over
 		if (currentWord === correctWord) {
 			setGameOver({ gameOver: true, guessedWord: true });
 			return;
