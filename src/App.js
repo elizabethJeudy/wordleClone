@@ -74,7 +74,7 @@ export default function App() {
 			alert("Opps, this is not word");
 		}
 		// renders when game is over
-		if (currentWord === correctWord) {
+		if (currentWord.toLowerCase() === correctWord) {
 			setGameOver({ gameOver: true, guessedWord: true });
 			return;
 		}

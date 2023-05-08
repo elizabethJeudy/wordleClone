@@ -38,3 +38,19 @@ body {
 #wrong {
   background-color: var(--accent-color2);
 }
+
+/* for ipad */
+@media screen and (max-width: 1024px) {
+  .App {
+    width: 90%;
+  }
+
+}
+
+
+/* for iphone */
+@media screen and (max-width: 600px) {
+  .App {
+    width: 90%;
+  }
+}

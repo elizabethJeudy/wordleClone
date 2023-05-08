@@ -34,3 +34,27 @@
 #used {
   background-color: var(--primary-color);
 }
+
+/* for ipad */
+@media screen and (max-width: 1024px) {
+  .keyboard {
+    width: 70%;
+  }
+}
+
+/* for iphone */
+@media screen and (max-width: 600px) {
+  .keyboard {
+    width: 95%;
+  }
+
+  .key {
+    height: 40px;
+  }
+
+  .line3 {
+    width: 105%;
+  }
+
+
+}
