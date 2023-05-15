@@ -25,20 +25,3 @@
   background-color: var(--primary-color);
 
 }
-
-/* for ipad */
-@media screen and (max-width: 1024px) {
-  .board {
-    width: 70%;
-
-  }
-
-}
-
-/* for iphone */
-@media screen and (max-width: 800px) {
-  .board {
-    width: 90%;
-    height: 450px;
-  }
-}
